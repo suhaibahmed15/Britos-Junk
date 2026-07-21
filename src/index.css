@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-line;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-ink text-mist font-body antialiased;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display;
+  }
+
+  ::selection {
+    background: #10B981;
+    color: #050505;
+  }
+}
+
+@layer components {
+  .eyebrow {
+    @apply font-mono text-[11px] uppercase tracking-[0.28em] text-emerald;
+  }
+
+  .container-px {
+    @apply px-6 md:px-10 lg:px-16;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 rounded-full bg-emerald px-7 py-3.5 text-sm font-semibold text-ink transition-all duration-300 hover:bg-emerald-bright hover:shadow-glow;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 rounded-full border border-line px-7 py-3.5 text-sm font-semibold text-mist backdrop-blur-sm transition-all duration-300 hover:border-emerald/60 hover:text-emerald;
+  }
+
+  .ticket-card {
+    @apply relative rounded-2xl border border-line bg-char-2/60 backdrop-blur-sm;
+  }
+
+  .ticket-notch::before,
+  .ticket-notch::after {
+    content: "";
+    @apply absolute h-4 w-4 rounded-full bg-ink;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .ticket-notch::before {
+    left: -8px;
+  }
+
+  .ticket-notch::after {
+    right: -8px;
+  }
+
+  .field {
+    @apply w-full rounded-xl border border-line bg-ink px-4 py-3 text-sm text-mist outline-none transition-colors duration-200 placeholder:text-slate focus:border-emerald;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #171917;
+  border-radius: 8px;
+  border: 2px solid #050505;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #10B981;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
