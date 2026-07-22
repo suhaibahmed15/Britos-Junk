@@ -4,6 +4,8 @@ import { useReveal } from "../lib/useReveal";
 
 // Import your logo image
 import logoImg from "../assets/bj.png";
+import logo from "../assets/owner.png";
+
 
 const TIMELINE = [
   { year: "2016", label: "Two trucks, one zip code, and a promise to show up on time." },
@@ -62,7 +64,7 @@ export default function About() {
           {/* Changed lg:place-self-end to lg:place-self-start to pull the image to the left (closing the gap) */}
           <div className="ab-reveal relative aspect-[4/5] w-full max-w-md place-self-center lg:place-self-start overflow-hidden rounded-3xl border border-line">
             <img
-              src="https://img.magnific.com/premium-photo/handsome-guy-animation_605905-16276.jpg?w=740"
+              src={logo}
               alt="Manny Brito - Britos Junk Owner"
               className="h-full w-full object-cover"
             />

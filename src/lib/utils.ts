@@ -4,11 +4,11 @@ export function cx(...classes: Array<string | false | null | undefined>) {
 
 export const BUSINESS = {
   name: "Britos Junk",
-  phoneDisplay: "(555) 018-2947",
-  phoneHref: "+15550182947",
-  whatsappHref: "https://wa.me/15550182947",
+  phoneDisplay: "(786) 431-6282",
+  phoneHref: "+17864316282",
+  whatsappHref: "https://wa.me/17864316282",
   email: " britosjunk@icloud.com",
-  addressLine: "Serving the greater metro area",
+  addressLine: "Lehigh acres, florida",
   hours: [
     { day: "Mon – Fri", time: "7:00 AM – 8:00 PM" },
     { day: "Saturday", time: "8:00 AM – 6:00 PM" },
